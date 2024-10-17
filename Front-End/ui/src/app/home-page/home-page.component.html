@@ -1,0 +1,112 @@
+<div class="container-fluid g-0 ">
+    <app-header  (sideNavToggled)="sideNavStatus = $event;"></app-header>
+  
+    <main>
+      <app-side-nav [sideNavStatus]="sideNavStatus" [ngClass]="{'app-side-nav-open': sideNavStatus}"></app-side-nav>
+  
+      <div  class="display-area" [ngClass]="{'display-area-shrink': sideNavStatus}">
+        <section class="welcome-section">
+          <div class="welcome-div">
+            <div class="welcome-msg">
+              <p *ngIf="english">Welcome to Seat Booking App!</p>
+            <p *ngIf="hindi">सीट बुकिंग एप्लिकेशन में आपका स्वागत है<br>We can only display the welcome message in Hindi. Kindly know English to proceed.</p>
+            </div>
+            <div>
+              <button class="" (click)="englishWelcome()">English</button>
+              <button class="m-2" (click)="hindiWelcome()">Hindi</button>
+            </div>
+            <br>
+            <!-- <app-landing-page></app-landing-page> -->
+            <div class="tagline">
+              <div>
+                <h1>Console Commando's Seat Booking App</h1>
+              </div>
+              <div class="tagline-break"></div>
+              <div style="text-align:left;">
+                <h1>Fly higher with Boeing!<br> Book seats comfortably with our Seat Booking App!</h1>
+              </div>
+            </div>
+            <br>
+            <br>
+            <div>
+              <p>To book your seat, please click on the New Booking button below.</p>
+            <button routerLink="/new-booking" class="p-2"><i class="fa-solid fa-plus p-2"></i>New Booking</button>
+            </div>
+            
+          </div>
+        </section>
+        <section id="about-section">
+          <div class="about-div">
+            <h2>About</h2>
+            <br>
+            <div class="tagline">
+              <div>
+                <h1>Features</h1>
+              </div>
+              <div class="tagline-break"></div>
+              <div style="text-align:left;">
+                <h3>Seats and meeting room booking at the click of buttons</h3>
+                <h3>Hassle-free experience</h3>
+                <h3>Sit back and relax while we do the booking</h3>
+              </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <h2>Meet our team</h2>
+            <br>
+            
+            <div class="developers">
+              <div class="developer" *ngFor="let person of persons">
+                <img src="{{person.imgUrl}}">
+                <p class="person-name">{{person.name}}</p>
+                <p class="person-title">{{person.professionTitle}}</p>
+                <p class="person-exp">Experience: {{person.exp}}</p>
+                <p class="person-hobby">Hobby: {{person.hobby}}</p>
+              </div>
+            </div>
+            <!-- <div class="logo">
+              <img class="logo-end" src="./assets/TeamLogo.jpg.crdownload">
+            </div> -->
+          </div>
+        </section>
+        <section id="thankyou-section">
+          <div class="thankyou-div">
+            <h2>Thank you <span style="color:red">&#9829;</span></h2>
+            <br>
+            <div class="thankyouTrainers">
+              <div class="trainersLeft">
+                <div>Training Partners</div>
+              </div>
+              <div class="trainersRight">
+                <div class="trainers" *ngFor="let trainer of trainers">
+                  <div class="trainer"><p style="text-align:center;">{{trainer}} </p></div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="otherPartners">
+              <div class="otherPartnersLeft">Motivation Partner</div>
+              <div class="otherPartnersRight">Cristiano Ronaldo</div>
+            </div>
+            <div class="otherPartners">
+              <div class="otherPartnersLeft">Activation Partner</div>
+              <div class="otherPartnersRight">Coffee machine</div>
+            </div>
+            <div class="otherPartners">
+              <div class="otherPartnersLeft">Almighty Partner</div>
+              <div class="otherPartnersRight">stackoverflow</div>
+            </div>
+            <div class="logo">
+              <img class="logo-end" src="./assets/TeamLogo.jpg.crdownload">
+            </div>
+            
+          </div>
+          
+        </section>
+      </div>
+    </main>
+  </div>
+  
+
+  

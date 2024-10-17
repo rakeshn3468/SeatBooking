@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- new-booking.component.html -->
+
+<div class="container">
+    <!-- <div>
+        <label for="tower">Tower Name</label>
+        <select id="tower" [(ngModel)]="selectedTower" (change)="onTowerChange()" name="selectedTower"> -->
+            <!-- Add options for tower names -->
+            <!-- <option *ngFor="let tower of towerNames" [value]="tower">{{ tower }}</option>
+        </select>
+    </div> -->
+  
+    <!-- <div>
+        <label for="floor">Floor Number</label>
+        <select id="floor" [(ngModel)]="selectedFloor" (change)="onFloorChange()" name="selectedFloor"> -->
+            <!-- Add options for floor numbers based on selected tower -->
+            <!-- <option *ngFor="let floor of getFloors()" [value]="floor">{{ floor }}</option>
+        </select>
+    </div> -->
+
+    <label for="tower">Tower Name</label>
+    <select id="tower" [(ngModel)]="selectedTower"  name="selectedTower">
+        <option *ngFor="let tower of towerNames" [value]="tower">{{ tower }}</option>
+      </select>
+      
+      <label for="floor">Floor Number</label>
+      <select id="floor" [(ngModel)]="selectedFloor"  name="selectedFloor">
+        <option *ngFor="let floor of floorNumbers" [value]="floor">{{ floor }}</option>
+      </select>
+      
+
+    <!-- Add other form fields -->
+    
+
+    <div>
+        <label for="fromDate">From Date</label>
+        <input type="date" id="fromDate" [(ngModel)]="fromDate" name="fromDate" required>
+    </div>
+  
+    <div>
+        <label for="toDate">To Date</label>
+        <input type="date" id="toDate" [(ngModel)]="toDate" name="toDate" required>
+    </div>
+
+    <app-floor-layout [floor_Number]="selectedFloor" [tower_Name]="selectedTower" #floorLayoutComponent></app-floor-layout>
+    <!-- <br> -->
+  
+    <button (click)="book()" routerLink="/confirmPage" style="margin-left: 310px;">Book</button>
+
+</div>
+
+</body>
+</html>

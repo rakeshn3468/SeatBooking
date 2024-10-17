@@ -1,0 +1,15 @@
+<nav class="navbar d-flex navbar-expand navbar-dark px-2 bg-dark justify-content-between align-items-center">
+    <!-- <div class="side-nav-button p-3 me-1 text-light" (click)="SideNavToggle()" title="Menu">
+        <i class="fa-solid fa-bars" style="margin-right:10px;"></i>
+    </div> -->
+    <div>
+        <i class="fa fa-user" aria-hidden="true" style="color:white;margin-left:15px;width:24px"></i>
+        <span class="navbar-brand px-3" href="#">Welcome, {{firstName}} {{lastName}} </span>
+    </div>
+    <div class="d-flex">
+        <a class="navbar-brand rightnav px-1" routerLink="/colleague" title="Click here to know about the developers">Your Team</a>
+        <a class="navbar-brand rightnav px-1" routerLink="/userHistory"  title="Click here to get history of your Bookings">History</a>
+        <a class="navbar-brand rightnav px-1" routerLink="/profile" title="Click here to view your profile details">Profile</a>
+        <a class="navbar-brand rightnav px-1" href="#"  title="Click here to logout of the app">Logout</a>
+    </div>
+</nav>

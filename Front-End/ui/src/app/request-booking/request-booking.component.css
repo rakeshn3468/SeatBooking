@@ -1,0 +1,45 @@
+
+.button-approve{
+    background-color: green;
+    color:white;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border:none;
+    border-radius:5px;
+    margin-left:2px;
+    margin-right:2px;
+}
+
+.button-approve:hover{
+    opacity:0.9;
+    cursor:pointer;
+}
+
+.button-decline{
+    background-color: rgb(229, 58, 58);
+    color:white;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border:none;
+    border-radius:5px;
+}
+
+.button-decline:hover{
+    opacity:0.9;
+    cursor:pointer;
+}
+table {
+    
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+
+  th{
+    background-color: #ff4c68;
+  }

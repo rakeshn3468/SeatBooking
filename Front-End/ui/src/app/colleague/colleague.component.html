@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colleague List</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<body>
+    <div class="page-container">
+        <h1 style="color: white;">Colleague List</h1>
+        <div *ngFor="let colleague of colleagues" class="colleague-item">
+            <h2>{{ colleague.first_name }} {{ colleague.last_name }}</h2>
+            <p>Email: {{ colleague.email }}</p>
+        </div>
+    </div>
+</body>
+</html>

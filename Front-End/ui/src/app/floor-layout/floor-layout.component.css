@@ -1,0 +1,255 @@
+.floor{
+    display:flex;
+    justify-content:center;
+    /* padding:10px; */
+  }
+  .seat-layout {
+    display:flex;
+    flex-direction:column;
+    padding:20px;
+    justify-content:center;
+    align-items:center;
+    border: solid;
+    border-width: 2px;
+    margin-right:10px;
+    background-color:lightgoldenrodyellow;
+  }
+  
+  .floor-plan{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center; */
+    padding:10px;
+    background-color:lightsalmon;
+  }
+  
+  .no-booking-rooms{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    row-gap:5px;
+    width:120px;
+    background-color:lightgoldenrodyellow;
+    margin-right:10px;
+    border: solid;
+    border-width: 2px;
+    padding:10px;
+  }
+  
+  .area-name{
+    transform: rotate(-90deg);
+  }
+  
+  .reception,.indoor-games{
+    display:flex;
+    justify-content:center;
+    font-weight: 500;
+    align-items:center;
+    height:50%;
+    padding:10px;
+    border:solid;
+    border-width: 1px;
+    background-color:lightseagreen;
+  }
+  
+  .indoor-games{
+    display:flex;
+    justify-content:center;
+    font-weight: 500;
+    align-items:center;
+    height:50%;
+    padding:10px;
+    border:solid;
+    border-width: 1px;
+    background-color:pink;
+  }
+  
+  .restroom{
+    display:flex;
+    justify-content:center;
+    font-weight: 500;
+    align-items:center;
+    height:70%;
+    padding:10px;
+    border:solid;
+    border-width: 1px;
+    background-color:lightcoral;
+  }
+  
+  .printing-room{
+    display:flex;
+    justify-content:center;
+    font-weight: 500;
+    align-items:center;
+    height:30%;
+    padding:10px;
+    border:solid;
+    border-width: 1px;
+    background-color:lightgrey;
+  }
+  
+  .smoking-room{
+    display:flex;
+    justify-content:center;
+    font-weight: 500;
+    align-items:center;
+    height:30%;
+    padding:10px;
+    border:solid;
+    border-width: 1px;
+    background-color:red;
+  }
+  
+  .breakout-room{
+    display:flex;
+    justify-content:center;
+    font-weight: 500;
+    align-items:center;
+    height:70%;
+    padding:10px;
+    border:solid;
+    border-width: 1px;
+    background-color:pink;
+  }
+  
+  .individual-cabins {
+      display: grid;
+      column-gap: 3px;
+      row-gap: 3px;
+      grid-template-rows: 60px 60px;
+      grid-template-columns: 60px 60px 60px 60px 60px 60px;
+      padding-bottom:8px;
+    }
+  
+    .individual-cabin {
+      border: solid;
+      background-color:aliceblue;
+      text-align: center;
+      border-width: 1px;
+      padding:20px;
+      cursor:pointer;
+    }
+  
+    .individual-cabin:hover{
+      background-color: rgb(102, 243, 163);
+      scale:1.05;
+    }
+  
+    .manager-cabins {
+      display: grid;
+      column-gap: 8px;
+      grid-template-rows: 70px;
+      grid-template-columns: 120px 120px 120px;
+      padding-bottom:8px;
+    }
+  
+    .manager-cabin {
+      border: solid;
+      background-color:lightcyan;
+      text-align: center;
+      border-width: 1px;
+      padding:25px;
+      cursor:pointer;
+    }
+  
+    .manager-cabin:hover{
+      background-color: rgb(102, 243, 163);
+      scale:1.05;
+    }
+  
+    .meeting-rooms {
+      display: grid;
+      column-gap: 15px;
+      grid-template-rows: 140px;
+      grid-template-columns: 180px 180px;
+  
+    }
+  
+    .meeting-room {
+      border: solid;
+      background-color:lightskyblue;
+      text-align: center;
+      border-width: 1px;
+      padding:60px;
+      cursor:pointer;
+    }
+  
+    .meeting-room:hover{
+      background-color: rgb(102, 243, 163);
+      scale:1.02;
+    }
+  
+    .selected{
+      background-color: rgb(73, 244, 101);
+    }
+  
+    .book-button{
+      margin-right:0px;
+      margin-left:5px;
+      margin-top:5px;
+      width:300px;
+      font-size: 14px;
+      border-radius: 3px;
+      background-color: #217a1b;
+      color: white;
+      border: none;
+      padding-left:5px;
+      padding-right:5px;
+      padding-top:4px;
+      padding-bottom:4px;
+      cursor: pointer;
+    }
+  
+    
+    .book-button:active{
+      background-color: white;
+      color: #217a1b;
+    }
+  
+    .book-button:hover{
+      opacity:0.9;
+    }
+  
+    .book-button-div{
+      display:flex;
+      justify-content:center;
+    }
+  
+    /* Add this CSS to your styles file (e.g., floor-plan.component.css) */
+  
+  .individual-cabin:hover,
+  .manager-cabin:hover,
+  .meeting-room:hover {
+    background-color: transparent; /* Remove default hover color */
+  }
+  
+  .individual-cabin:active,
+  .manager-cabin:active,
+  .meeting-room:active {
+    background-color: green; /* Set background color on click */
+  }
+  
+ 
+  /* Add these styles for manager-cabin and meeting-room */
+.manager-cabin, .meeting-room {
+    border: solid;
+    text-align: center;
+    border-width: 1px;
+    padding: 25px;
+    cursor: pointer;
+  }
+  
+  .manager-cabin:hover, .meeting-room:hover {
+    background-color: rgb(102, 243, 163);
+    transform: scale(1.05);
+  }
+  
+  /* Keep the existing styles for selected and book-button */
+  
+  .unavailable-seat {
+    opacity: 0.5; /* Example: reducing opacity to 50% */
+    pointer-events: none; /* Disable pointer events */
+  }
+  
+  

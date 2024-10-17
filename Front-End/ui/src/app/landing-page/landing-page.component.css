@@ -1,0 +1,134 @@
+.gradient-background {
+    background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+    height: 100vh; /* Set the height to 100vh to cover the entire viewport height */
+    scroll-margin-top: 1px;
+
+
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.icon-square{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.75rem;
+}
+
+
+#container-fluid {
+    overflow: hidden;
+    position: relative;
+    background-color: #ff4c68;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-wrapper {
+    width: 100%; /* Adjust the width to match the number of slides */
+    display: flex;
+    animation: moveSlideshow 15s linear infinite;
+}
+
+.slider {
+    flex: 0 0 100%; /* Adjust the width for each slide (3 slides) */
+    text-align: center;
+}
+
+.slider h2 {
+    font-size: 2rem;
+}
+
+/* Keyframes for sliding animation */
+@keyframes moveSlideshow {
+    0% {
+        transform: translateX(0);
+    }
+    33.33% {
+        transform: translateX(0);
+    }
+    66.66% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+
+
+
+
+  
+  #About {
+    background-color: #f5f5f5; /* Background color */
+    padding: 30px; /* Add padding for spacing */
+    text-align: center; /* Center-align text */
+  }
+  
+  #About h1 {
+    font-size: 28px; /* Adjust the font size as needed */
+    color: #333; /* Title text color */
+  }
+  
+  #About p {
+    font-size: 16px; /* Adjust the font size as needed */
+    color: #666; /* Paragraph text color */
+    line-height: 1.5; /* Line height for spacing between lines */
+  }
+  
+
+  #footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff4c68;
+    height: 100px; /* You can adjust the height as needed */
+  }
+  
+  .footer-class p {
+    margin: 0; /* To remove default margin */
+  }
+
+
+  /* Align the navigation bar to the top left */
+.navbar-brand {
+    margin-left: 0;
+    font-size: large;
+}
+.nav-item{
+    font-size: 20px;
+}
+
+/* Align the navigation links to the right */
+.navbar-nav {
+    margin-left: auto;
+}
+
+/* Align the heading and buttons to the right */
+#title h1 {
+    text-align: right;
+}
+
+/* Align buttons to the right */
+#title .d-grid {
+    justify-content: end;
+}
+
+
+ 

@@ -1,0 +1,33 @@
+<div class="body">
+    <div class="feedback-container">
+      <h1>Feedback Forms</h1>
+      <form (ngSubmit)="onSubmit()">
+      <div>
+          <label for="rating" class="rating_label">Rate your experience</label>
+          
+          <div class="star-rating">
+            <span *ngFor="let star of stars" (click)="setRating(star)" [class.selected]="star <= rating">&#9733;</span> 
+            <!-- <span [(ngModel)]="rating" name="rating" class="selected-count" >{{ rating }}</span> Displays the selected count -->
+
+          </div>
+        
+       </div>
+          <div>
+            <br>
+            <br>
+            <textarea id="co*[ments" [(ngModel)]="comments" name="comments" rows="4" cols="50" class="comments" placeholder="Write your feedback here" required></textarea>
+          </div> 
+      
+          <div class="btn-group">
+            <button class="btn submit" type="submit" [disabled]="isFeedbackSubmitted" >Submit</button> 
+            <button (click)="clearFeedback()" class="btn cancel"[hidden]="isFeedbackSubmitted">Clear</button>
+          </div>
+        
+          <div *ngIf="isFeedbackSubmitted">
+            <button (click)="isFeedbackSubmitted = false">Close</button> 
+          </div>
+       
+        </form>
+    </div>
+</div>
+    

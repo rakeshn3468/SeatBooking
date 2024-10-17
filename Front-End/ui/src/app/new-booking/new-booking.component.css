@@ -1,0 +1,54 @@
+/* new-booking.component.css */
+
+body {
+    background-color: #ff4c68;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150vh;
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* height: 100px; */
+    height: 120vh;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+select, input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+/* new-booking.component.css */
+
+button {
+    width: 50%; /* Set a desired width for the button */
+    margin: 0 auto; /* Center the button horizontally */
+    padding: 10px 20px;
+    background-color: #ff3055;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    align-self: flex-end; /* Align the button to the end of the container */
+}
+
+button:hover {
+    background-color: #ff4c68;
+}

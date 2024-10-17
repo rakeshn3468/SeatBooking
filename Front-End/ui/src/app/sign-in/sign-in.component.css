@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    background: #ff4c68;
+    font: 600 16px/18px 'Open Sans', sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.login-wrap {
+    width: 80%;
+    max-width: 400px;
+    margin: auto;
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);
+    background: rgba(40, 57, 101, .9);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.login-html .sign-up-htm {
+    display: block;
+    margin-top: 20px;
+}
+
+.group {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+label {
+    color: #aaa;
+    font-size: 14px;
+    flex: 1;
+    text-align: right;
+    padding-right: 10px;
+}
+
+input, select {
+    border: none;
+    padding: 15px 20px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, .1);
+    color: white;
+    flex: 3;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+button {
+    background: #1161ee;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    
+}
+
+h2 {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+/* Change the text color of dropdown options to black */
+select option {
+    color: black;
+}

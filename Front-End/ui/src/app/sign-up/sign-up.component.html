@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <title>Seat Booking</title>
+</head>
+<body>
+    <div class="login-wrap">
+        <div class="login-html">
+            <form (ngSubmit)="signUpButton()">
+                <div class="sign-up-htm">
+                    <h2 ><a style="color: #aaa; text-decoration: none;" routerLink="/sign-in">Are you already a member?</a></h2>
+                    <br>
+                    <div class="group">
+                        <label for="role">Role:</label>
+                        <input type="radio" name="role" value="I" id="employee" [(ngModel)]="selectedRole" (change)="onRoleChange()">
+                        <label for="employee">Employee</label>
+                        <input type="radio" name="role" value="manager" id="manager" [(ngModel)]="selectedRole" (change)="onRoleChange()">
+                        <label for="manager">Manager</label>
+                        <input type="radio" name="role" value="TL" id="teamLead" [(ngModel)]="selectedRole" (change)="onRoleChange()">
+                        <label for="teamLead">TeamLead</label>
+                    </div>
+                    <div class="input group" id="managerNameDiv" [style.display]="managerNameDisplay">
+                        <label for="managerName">Manager's Name:</label>
+                        <select [(ngModel)]="Manager_Name" id="managerName" name="Manager_Name">
+                            <!-- <option value=""></option> -->
+                            <option value="Santhosh Kumar Ganesan">Santhosh Kumar Ganesan</option>
+                            <option value="Madhu Revanasiddappa">Madhu Revanasiddappa</option>
+                            <option value="Lekshmy K C">Lekshmy K C</option>
+                        </select>
+                    </div>
+                    <div class="input group" id="tlNameDiv" [style.display]="tlNameDisplay">
+                        <label for="tlName">TeamLead Name:</label>
+                        <select [(ngModel)]="Team_Lead_Name" id="tlName" name="Team_Lead_Name">
+                            <!-- <option value=""></option> -->
+                            <option value="Pradeep Kumar">Pradeep Kumar</option>
+                            <option value="DhanyaShree K B">DhanyaShree K B</option>
+                            <option value="Prateek R Nayak">Prateek R Nayak</option>
+                            <option value="Sameeksha Manjunath">Sameeksha Manjunath</option>
+                        </select>
+                    </div>
+                    <div class="group">
+                        <label for="bemsid">Bems_ID:</label>
+                        <input [(ngModel)]="Bems_ID" type="number" id="bemsid" name="Bems_ID">
+                    </div>
+                    <div class="group">
+                        <label for="firstName">First Name:</label>
+                        <input [(ngModel)]="First_Name" type="text" id="firstName" name="First_Name">
+                    </div>
+                    <div class="group">
+                        <label for="lastName">Last Name:</label>
+                        <input [(ngModel)]="Last_Name" type="text" id="lastName" name="Last_Name">
+                    </div>
+                    <div class="group">
+                        <label for="email">Email:</label>
+                        <input [(ngModel)]="Email" type="email" id="email" name="Email">
+                    </div>
+                    <div class="group">
+                        <label for="password">Password:</label>
+                        <input [(ngModel)]="Password" type="password" id="password" name="Password">
+                    </div>
+                    <div class="group">
+                        <label for="confirmPassword">Confirm Password:</label>
+                        <input [(ngModel)]="Confirm_Password" type="password" id="confirmPassword" name="Confirm_Password">
+                    </div>
+                    <div class="group">
+                        <button type="submit" class="button">Sign Up</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

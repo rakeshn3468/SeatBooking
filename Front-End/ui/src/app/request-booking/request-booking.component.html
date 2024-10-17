@@ -1,0 +1,35 @@
+<table border="1px">
+    <thead>
+      <tr>
+        <th>Booking ID</th>
+        <th>Seat ID</th>
+        <th>Tower Name</th>
+        <th>Floor Number</th>
+
+        <th>From Date</th>
+        <th>To Date</th>
+        <th>Admin action</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let booking of bookings"  >
+        <td>{{ booking.booking_ID }}</td>
+        <td>{{ booking.seatId }}</td>
+        <td>{{ booking.towerName }}</td>
+        <td>{{booking.floorNumber}}</td>
+        <td>{{ booking.booking_date | date:'yyyy-MM-dd' }}</td>
+<td>{{ booking.to_date | date:'yyyy-MM-dd' }}</td>
+
+<td>
+  <button *ngIf="!isApproved" class="button-approve" (click)="approveRequest()">Approve</button>
+  <button *ngIf="!isApproved" class="button-decline" (click)="declineRequest(booking.booking_ID)">Decline</button>
+  <h1 *ngIf="isApproved">Approved</h1>
+</td>
+
+      </tr>
+      
+      
+    </tbody>
+  </table>
+

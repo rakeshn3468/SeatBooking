@@ -1,0 +1,12 @@
+<div class="body">
+    <div class="confirmation-card">
+        <h2>Booking Details</h2>
+        <br>
+        <p><strong>Seat Id:</strong>&nbsp;&nbsp; <span>{{ Seat_Id }}</span></p>
+        <p><strong>Tower:</strong>&nbsp;&nbsp; <span>{{ tower }}</span></p>
+        <p><strong>Floor:</strong>&nbsp;&nbsp; <span>{{ floor }}</span></p>
+        <p><strong>From Date :</strong>&nbsp;&nbsp; <span>{{ from_date | date:'dd/MM/yyyy' }}</span></p>
+        <p><strong>To Date :</strong>&nbsp;&nbsp; <span>{{ to_date | date:'dd/MM/yyyy' }}</span></p>
+        <button class="confirmation-button confirm-yes" (click)="confirmBooking()">Done</button>
+    </div>
+</div>

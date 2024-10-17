@@ -1,0 +1,62 @@
+
+<h1 style="text-align:center;">Seat Layout</h1>
+
+
+<div class="floor">
+  <div class="floor-plan">
+    <div class="no-booking-rooms">
+      <div class="reception"><p class="area-name">RECEPTION</p></div>
+      <div class="indoor-games"><p class="area-name">INDOOR GAMES</p></div>
+    </div>
+    <div class="seat-layout">
+      <div class="individual-cabins" >
+        <div class="individual-cabin" 
+  *ngFor="let individualCabin of individualCabins" 
+  (click)="getSeatID(individualCabin)" 
+  [attr.id]="individualCabin"
+  [class.selected]="isSeatSelected(individualCabin)">
+  I{{ individualCabin }}
+</div>
+      </div>
+      <!-- Manager Cabins -->
+<div class="manager-cabins">
+    <div class="manager-cabin" 
+      *ngFor="let managerCabin of managerCabins" 
+      (click)="getManagerSeatID(managerCabin)" 
+      [attr.id]="'M' + managerCabin"
+      [class.selected]="isSeatSelected(managerCabin)">
+      M{{ managerCabin }}
+    </div>
+  </div>
+  
+  <!-- Meeting Rooms -->
+  <div class="meeting-rooms">
+    <div class="meeting-room" 
+      *ngFor="let meetingRoom of meetingRooms" 
+      (click)="getMeetingRoomID(meetingRoom)" 
+      [attr.id]="'MR' + meetingRoom"
+      [class.selected]="isSeatSelected(meetingRoom)">
+      MR{{ meetingRoom }}
+    </div>
+  </div>
+
+  
+
+  
+  
+    </div>
+    <div class="no-booking-rooms">
+      <div class="restroom"><p class="area-name">RESTROOM</p></div>
+      <div class="printing-room"><p class="area-name">PRINTING ROOM</p></div>
+    </div>
+    <div class="no-booking-rooms">
+      <div class="smoking-room"><p class="area-name">SMOKING</p></div>
+      <div class="breakout-room"><p class="area-name">BREAKOUT</p></div>
+    </div>  
+  </div>
+</div>
+<div class="book-button-div">
+  <h3  *ngIf="isSeatSelected" >Booking {{selectedSeatType}}{{selectedSeat}}</h3>
+</div>
+
+

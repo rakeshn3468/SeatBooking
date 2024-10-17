@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ff4c68;
+            flex-direction: column;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .profile-box {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 600px;
+        }
+
+        .profile-title {
+            font-size: 36px;
+            color: #ff4c68;
+        }
+
+        h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+        .back-button {
+            background-color: #ff4c68;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-box">
+        <h1 class="profile-title">My Profile</h1>
+        <h3><strong>First Name:</strong>  {{First_Name}}</h3>
+        <h3><strong>Last Name:</strong> {{Last_Name}}</h3>
+        <h3><strong>Email:</strong>  {{Email}}</h3>
+        <!-- <h3><strong>Password:</strong> {{Password}}</h3> -->
+        <!-- <h3><strong>Bems_ID:</strong> {{a}}</h3> -->
+        
+        <ng-container *ngIf="Manager_Name">
+            <h3><strong>Manager Name:</strong> {{Manager_Name}}</h3>
+        </ng-container>
+        
+        <ng-container *ngIf="Team_Lead_Name">
+            <h3><strong>Team Lead Name:</strong> {{Team_Lead_Name}}</h3>
+        </ng-container>
+        
+        <button class="back-button" routerLink="/home">Back to Home Page</button>
+    </div>
+
+</body>
+</html>

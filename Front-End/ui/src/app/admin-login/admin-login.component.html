@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seat Booking</title>
+</head>
+<body>
+    <br>
+    <!-- <h1>Hi Admin How are you!!! </h1> -->
+    <br>
+    <div class="login-wrap">
+        
+        <div class="login-html">
+            <br>
+            <div class="login-form">
+                <form (ngSubmit)="signInButton()">
+                    <div class="sign-in-htm">
+                        <h2  style="color: #aaa;" >Hello Admin!!</h2>
+                        <br>
+                        <div class="group">
+                            <label for="bemsid">Bems_ID:</label>
+                            <input [(ngModel)]="Bems_ID" type="number" name="Bems_ID" id="user" class="input">
+                        </div>
+                        <div class="group">
+                            <label for="password">Password:</label>
+                            <input [(ngModel)]="Password" type="password" name="Password" id="pass" class="input">
+                        </div>
+                        <div class="group" style="text-align: center;">
+                            <button type="submit" class="button">Sign In</button>
+                        </div>
+                        <div class="group" style="text-align: center; margin-top: 10px; display: flex; justify-content: space-between;">
+                            <a style="color: #aaa; text-decoration: none;" href="#">Forgot Password?</a>
+                            <a style="color: #aaa; text-decoration: none;" routerLink="/sign-in">Back to Sign-In Page</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
